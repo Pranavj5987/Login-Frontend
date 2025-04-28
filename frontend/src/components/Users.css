@@ -1,51 +1,136 @@
-/* Centering the content */
-.container {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Style for Logout Button */
-  .logout-btn {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 15px;
-    transition: 0.3s ease;
-  }
-  
-  .logout-btn:hover {
-    background-color: #cc0000;
-  }
-  
-  /* Style for Table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Table Header */
-  th {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-  }
-  
-  /* Table Body */
-  td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Hover Effect */
-  tr:hover {
-    background-color: #f2f2f2;
-  }
-  
+.user-container {
+  padding: 1rem 2rem;
+  background: #f2f6f9;
+  min-height: 95vh;
+}
+
+.user-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+}
+.user-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.user-head h2 {
+  font-size: 2rem;
+  color: #333;
+}
+.logout-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #e60000;
+}
+.table-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 800px;
+}
+
+.user-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #007bff;
+  color: #fff;
+  z-index: 1;
+}
+
+.user-table th,
+.user-table td {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+}
+
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.settings {
+  color: #007bff;
+}
+
+.settings:hover {
+  color: #0056b3;
+}
+
+.delete {
+  color: #dc3545;
+}
+
+.delete:hover {
+  color: #a71d2a;
+}

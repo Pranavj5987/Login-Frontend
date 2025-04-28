@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Register.css"; // Import the CSS file
+import { toast } from "react-toastify";
 
 function Register() {
   const [name, setName] = useState("");
@@ -16,7 +17,9 @@ function Register() {
       const data = { name, email, password, dob };
       console.log("Sending data:", data);  // 🔍 Log request before sending
       const res = await axios.post("http://localhost:5000/auth/register", data);
-      console.log("Registration success:", res.data);
+      if(res.data){
+        toast.success("User register successfully")
+      }
       navigate("/");
     } catch (err) {
       console.error("Registration Error:", err.response?.data || err.message);

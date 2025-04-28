@@ -12,7 +12,7 @@
   background-color: #1c1f26;
   padding: 30px 20px;
   border-radius: 12px;
-  width: 350px;
+  width: 400px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
@@ -105,4 +105,13 @@
 /* Checkbox Styling */
 input[type="checkbox"] {
   margin-right: 5px;
+}
+
+.nav-div{
+  display: flex;
+  color: rgb(174, 182, 189);
+  justify-content: space-between;
+}
+.nav-div a{
+  color: rgb(158, 140, 140);
 }
