@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./Login.css"; // Import the CSS file
+import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -26,13 +26,37 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form className="login-form" onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Login</button>
-      </form>
+    <div className="login-wrapper">
+      <div className="login-card">
+        <div className="login-header">SIGN IN</div>
+        <div className="avatar-placeholder">
+          <i className="fas fa-user-circle"></i>
+        </div>
+        <form className="login-form" onSubmit={handleLogin}>
+          <div className="input-group">
+            <i className="fas fa-user"></i>
+            <input
+              type="email"
+              placeholder="username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <i className="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+         
+          <button type="submit" className="login-btn">LOGIN</button>
+        </form>
+      </div>
     </div>
   );
 }
