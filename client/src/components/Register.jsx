@@ -16,7 +16,7 @@ function Register() {
     try {
       const data = { name, email, password, dob };
       console.log("Sending data:", data);  // 🔍 Log request before sending
-      const res = await axios.post("http://localhost:5000/auth/register", data);
+      const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/register`, data);
       if(res.data){
         toast.success("User register successfully")
       }
